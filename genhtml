@@ -30,7 +30,7 @@ for desktop in (ls $websitedir/assets/images/rice/full)
 	echo '		<h2>'(echo $basename | cut -d _ -f 1 | tr [a-z] [A-Z])'</h2>'
 	echo '	</div>'
 	echo '	<a href="./assets/rice/full/'$desktop'" target="_blank">'
-	echo '		<img class="right" src="./assets/images/rice/'$basename'.jpg"/>'
+	echo '		<img class="'$side'" src="./assets/images/rice/'$basename'.jpg"/>'
 	echo '	</a>'
 	echo '	<hr>'
 	echo
