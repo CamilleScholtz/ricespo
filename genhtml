@@ -15,6 +15,11 @@ set sideimg right
 set sidetxt left
 
 for desktop in (ls $websitedir/assets/images/rice/full)
+	# Continue if not an image
+	if test -z (echo $desktop | grep -i ".jpg\|.jpeg\|.png")
+		continue
+	end
+
 	if test $sideimg = right
 		set sideimg left
 	else
