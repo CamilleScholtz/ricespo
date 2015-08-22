@@ -19,7 +19,7 @@ for desktop in (ls $websitedir/assets/images/rice/full)
 
 	# Output html
 	echo '	<a href="./assets/full/'$desktop'" target="_blank">'
-	echo '		<img class="right" src="./assets/image/'$basename'.jpg"/>'
+	echo '		<img class="right" src="./assets/images/'$basename'.jpg"/>'
 	echo '	</a>'
 	echo '	<hr>'
 	echo
