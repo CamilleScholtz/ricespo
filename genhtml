@@ -11,14 +11,25 @@ set websitedir $HOME/code/git/ricespo
 
 ## EXECUTE
 
+set side right
+
 for desktop in (ls $websitedir/assets/images/rice/full)
+	if test $side = right
+		set side left
+	else
+		set side right
+	end
+
 	set basename (echo $desktop | cut -d . -f 1)
 
 	# Create smaller compressed images
 	convert $websitedir/assets/images/rice/full/$desktop -resize 720x -filter Lanczos $websitedir/assets/images/rice/$basename.jpg ^ /dev/null
 
 	# Output html
-	echo '	<a href="./assets/full/'$desktop'" target="_blank">'
+	echo '	<div class="'$side' text">'
+	echo '		<h2>'(echo $basename | cut -d _ -f 1 | tr [a-z] [A-Z])'</h2>'
+	echo '	</div>'
+	echo '	<a href="./assets/rice/full/'$desktop'" target="_blank">'
 	echo '		<img class="right" src="./assets/images/rice/'$basename'.jpg"/>'
 	echo '	</a>'
 	echo '	<hr>'
