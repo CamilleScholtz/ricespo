@@ -83,7 +83,7 @@ body {
 /* HEADER */
 
 #header {
-	background: url(../assets/image/page/bg.png);
+	background: url(../assets/images/page/bg.png);
 	height: 150px;
 	margin-top: 80px;
 }
@@ -174,7 +174,7 @@ body {
 }
 
 hr {
-	background: url(../assets/image/page/bg.png);
+	background: url(../assets/images/page/bg.png);
 	border: 0;
 	clear: both;
 	height: 100px;
