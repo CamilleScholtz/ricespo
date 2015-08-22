@@ -1,0 +1,27 @@
+#!/bin/fish
+#
+# onodera - onodera at openmailbox dot org
+# Chooses a random wallpaper from ~/.wallpapers
+
+## CONFIGURATION
+
+# Set website location
+set websitedir $HOME/code/git/ricespo
+
+
+## EXECUTE
+
+
+for desktop in (ls $websitedir/assets/images/rice/full)
+	set basename (echo $desktop | cut -d . -f 1)
+
+	# Create smaller compressed images
+	convert $websitedir/assets/images/rice/full/$desktop -resize 720x -filter Lanczos $websitedir/assets/images/rice/$basename.jpg ^ /dev/null
+
+	# Output html
+	echo '	<a href="./assets/full/'$desktop'" target="_blank">'
+	echo '		<img class="right" src="./assets/image/'$basename'.jpg"/>'
+	echo '	</a>'
+	echo '	<hr>'
+	echo
+end
