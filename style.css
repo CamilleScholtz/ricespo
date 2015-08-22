@@ -4,14 +4,14 @@
 	font-family: "Alte Haas Grotesk";
 	font-style: normal;
 	font-weight: normal;
-	src: local("Alte Haas Grotesk"), url(../assets/fonts/AlteHaasGroteskRegular.woff) format("woff");
+	src: local("Alte Haas Grotesk"), url(./assets/fonts/AlteHaasGroteskRegular.woff) format("woff");
 }
 
 @font-face {
 	font-family: "Alte Haas Grotesk Bold";
 	font-style: normal;
 	font-weight: normal;
-	src: local("Alte Haas Grotesk Bold"), url(../assets/fonts/AlteHaasGroteskBold.woff) format("woff");
+	src: local("Alte Haas Grotesk Bold"), url(./assets/fonts/AlteHaasGroteskBold.woff) format("woff");
 }
 
 * {
@@ -20,7 +20,7 @@
 }
 
 html {
-	background: url(../assets/images/page/bg.png);
+	background: url(./assets/images/page/bg.png);
 	margin: 0 auto;
 }
 
@@ -83,7 +83,7 @@ body {
 /* HEADER */
 
 #header {
-	background: url(../assets/images/page/bg.png);
+	background: url(./assets/images/page/bg.png);
 	height: 150px;
 	margin-top: 80px;
 }
@@ -174,7 +174,7 @@ body {
 }
 
 hr {
-	background: url(../assets/images/page/bg.png);
+	background: url(./assets/images/page/bg.png);
 	border: 0;
 	clear: both;
 	height: 100px;
