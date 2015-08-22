@@ -1,7 +1,7 @@
 #!/bin/fish
 #
-# onodera - onodera at openmailbox dot org
-# Chooses a random wallpaper from ~/.wallpapers
+# genhtml - Generate html and resize images
+# onodera, https://github.com/onodera-punpun
 
 ## CONFIGURATION
 
@@ -10,7 +10,6 @@ set websitedir $HOME/code/git/ricespo
 
 
 ## EXECUTE
-
 
 for desktop in (ls $websitedir/assets/images/rice/full)
 	set basename (echo $desktop | cut -d . -f 1)
