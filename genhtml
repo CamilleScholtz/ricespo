@@ -6,7 +6,7 @@
 ## CONFIGURATION
 
 # Set website location
-set websitedir $HOME/code/git/ricespo
+set websitedir $HOME/tmp/ricespo
 
 
 ## EXECUTE
