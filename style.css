@@ -14,20 +14,11 @@
 	outline: 0px;
 }
 
-html {
+html, body {
 	background: #FFFFFF;
 	margin: 0 auto;
 }
 
-body {
-	background: repeating-linear-gradient(to right bottom, #FBFAF8, #F7F4EF, #F5F2ED, #FBFAF8 800px);
-	font-family: "Alte Haas Grotesk", "sans-serif";
-	margin: 0 auto;
-	max-width: 1000px;
-	padding: 0;
-	top: 0px;
-	width: 75%;
-}
 
 ::selection, ::-moz-selection {
 	background: #EFEEEE;
@@ -37,33 +28,43 @@ body {
 /* HEADER */
 
 #header {
-	background: url(./assets/images/page/bg.png);
-	height: 150px;
-	margin-top: 80px;
+	background: #EFEEEE;
+	height: 125px;
+	left: 32px;
+	width: 300px;
+	position: fixed;
+	top: 32px;
+	opacity: 0;
+	z-index: 9000;
 }
 
-#header h1 {
-	color: #A39F9E;
-	font-family: "Alte Haas Grotesk Bold", "sans-serif";
-	font-size: 32px;
+h1 {
+	color: #DEDDDC;
+	font-family: "Raleway", "sans-serif";
+	font-size: 42px;
 	font-weight: normal;
-	letter-spacing: 6px;
+	line-height: 24px;
+	margin-left: 20px;
 }
 
-#header h2 {
-	color: #A39F9E;
-	font-family: "Alte Haas Grotesk Bold", "sans-serif";
+h2 {
+	color: #DEDDDC;
+	font-family: "Raleway", "sans-serif";
 	font-size: 15px;
 	font-weight: normal;
+	margin-left: 23px;
 }
 
-#header h2 a {
-	color: #A39F9E;
-	border: 1px solid #A39F9E;
-	font-family: "Alte Haas Grotesk Bold", "sans-serif";
-	font-size: 15px;
-	font-weight: normal;
-	padding: 10px;
+h2 a {
+	-moz-transition: color 0.1s ease-in-out 0s;
+	-o-transition: color 0.1s ease-in-out 0s;
+	-webkit-transition: color 0.1s ease-in-out 0s;
+	color: #DEDDDC;
+	transition: color 0.1s ease-in-out 0s;
+}
+
+h2 a:hover {
+	color: #BAC2CC;
 }
 
 

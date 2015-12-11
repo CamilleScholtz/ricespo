@@ -11,7 +11,7 @@ set websitedir $HOME/code/git/ricespo
 
 ## EXECUTE
 
-for desktop in (ls $websitedir/assets/images/rice/full)
+for desktop in (ls $websitedir/assets/full)
 	# Continue if not an image
 	if test -z (echo $desktop | grep -i ".jpg\|.jpeg\|.png")
 		continue
@@ -20,7 +20,7 @@ for desktop in (ls $websitedir/assets/images/rice/full)
 	set basename (echo $desktop | cut -d . -f 1)
 
 	# Create smaller compressed images
-	convert $websitedir/assets/images/rice/full/$desktop -resize 900x -filter Lanczos $websitedir/assets/images/rice/$basename.jpg ^ /dev/null
+	convert $websitedir/assets/full/$desktop -resize 900x -filter Lanczos $websitedir/assets/images/$basename.jpg ^ /dev/null
 
 	# Output html
 	echo '	<div id="border">'
