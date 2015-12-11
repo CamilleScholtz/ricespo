@@ -11,39 +11,22 @@ set websitedir $HOME/code/git/ricespo
 
 ## EXECUTE
 
-set sideimg right
-set sidetxt left
-
 for desktop in (ls $websitedir/assets/images/rice/full)
 	# Continue if not an image
 	if test -z (echo $desktop | grep -i ".jpg\|.jpeg\|.png")
 		continue
 	end
 
-	if test $sideimg = right
-		set sideimg left
-	else
-		set sideimg right
-	end
-
-	if test $sidetxt = right
-		set sidetxt left
-	else
-		set sidetxt right
-	end
-
 	set basename (echo $desktop | cut -d . -f 1)
 
 	# Create smaller compressed images
-	convert $websitedir/assets/images/rice/full/$desktop -resize 720x -filter Lanczos $websitedir/assets/images/rice/$basename.jpg ^ /dev/null
+	convert $websitedir/assets/images/rice/full/$desktop -resize 900x -filter Lanczos $websitedir/assets/images/rice/$basename.jpg ^ /dev/null
 
 	# Output html
-	echo '	<div class="'$sideimg' text">'
-	echo '		<h2>'(echo $basename | cut -d _ -f 1 | tr [a-z] [A-Z] | tr ã Ã)'</h2>'
+	echo '	<div id="border">'
+	echo '		<a href="./assets/full/'$desktop'" target="_blank">'
+	echo '			<span class="helper"></span><img src="./assets/images/'$basename'.jpg"/>'
+	echo '		</a>'
 	echo '	</div>'
-	echo '	<a href="./assets/images/rice/full/'$desktop'" target="_blank">'
-	echo '		<img class="'$sidetxt'" src="./assets/images/rice/'$basename'.jpg"/>'
-	echo '	</a>'
-	echo '	<hr>'
 	echo
 end
